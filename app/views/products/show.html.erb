@@ -1,0 +1,18 @@
+
+<div class="page header">
+  <p>
+  <% if notice %>
+    <div class="alert alert-success text-center" role="alert">
+      <p id="notice"><%= notice %></p>
+    </div>
+  <% end %>
+</p>
+
+  <h2><%= @product.name %></h2>
+
+</div>
+
+<div>
+  <%= link_to 'Edit', edit_product_path(@product) %>
+  <%= link_to 'Delete', @product %>
+</div>
