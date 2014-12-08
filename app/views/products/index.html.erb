@@ -1,3 +1,30 @@
 <h1>Products</h1>
 
+<% if notice %>
+  <div class="alert alert-success text-center" role="alert">
+    <p id="notice"><%= notice %></p>
+  </div>
+<% end %>
+
 <%= link_to 'Create a New Product', new_product_path %>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @products.each do |product| %>
+    <tr>
+      <td><%= product.name %></td>
+      <td><%= product.description %></td>
+      <td><%= product.price %></td>
+      
+    </tr>
+    <% end %>
+  </tbody>
+
+</table>
