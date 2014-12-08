@@ -11,8 +11,22 @@
   <h2><%= @product.name %></h2>
 
 </div>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
 
-<div>
-  <%= link_to 'Edit', edit_product_path(@product) %>
-  <%= link_to 'Delete', @product %>
-</div>
+    <tr>
+      <td><%= @product.description %></td>
+      <td><%= @product.price %></td>
+      <td><%= link_to 'Edit', edit_product_path(@product) %>
+      <%= link_to 'Delete', @product %>
+    </td>
+  </tr>
+  </tbody>
+
+</table>
